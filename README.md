@@ -30,10 +30,6 @@ Una reflexión sobre la soledad, la tecnología y la conexión humana, inspirada
 
 <img src="./public/backgrounds/b1.png" width="220" alt="Ciudad vacía"/>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 3d2e270646f0ab972a8ee574fe3a891410810905
 ### Watash Sprites
 
 <img src="./public/watash/w2.png" width="110" alt="Alegre"/>
