@@ -5,6 +5,8 @@
   
   **Una experiencia interactiva inspirada en Chobits**
   
+  🌐 **[Ver Demo en Vivo](https://ciudad-vacia.vercel.app/)** 🌐
+  
   ![License](https://img.shields.io/badge/license-CC0%201.0-blue.svg)
   ![Vue](https://img.shields.io/badge/Vue-3.5-brightgreen.svg)
   ![Tailwind](https://img.shields.io/badge/Tailwind-4.0-38B2AC.svg)
