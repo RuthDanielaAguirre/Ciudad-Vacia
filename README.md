@@ -14,33 +14,6 @@
 
 ---
 
-## ⚠️ CRÉDITOS - PROPIEDAD INTELECTUAL
-
-<div align="center">
-
-### 🎨 **CHOBITS (ちょびっツ)** es propiedad de **CLAMP (クランプ)**
-
-**Creadoras:**
-- **Nanase Ohkawa** (大川 七瀬) - Historia y guión
-- **Mokona** (もこな) - Diseño de personajes
-- **Tsubaki Nekoi** (猫井 椿) - Arte
-- **Satsuki Igarashi** (いがらし 寒月) - Fondos
-
-**© CLAMP / Kodansha / Madhouse**
-
-📅 **Manga:** 2000-2002 | **Anime:** 2002
-
----
-
-**TODOS LOS DERECHOS DE CHOBITS PERTENECEN A SUS CREADORES.**
-
-Este proyecto es una **obra derivada sin fines de lucro**.  
-No está afiliado, respaldado ni patrocinado por CLAMP o sus licenciatarios.
-
-</div>
-
----
-
 ## 📖 Sobre el Proyecto
 
 **Ciudad Vacía** es un proyecto que explora el concepto de **"La ciudad donde no vive nadie"** de Chobits a través de una historia interactiva con sistema drag & drop.
@@ -122,17 +95,33 @@ pnpm build
 
 ## 📜 Licencia
 
-### Código Fuente
 
-**CC0 1.0 Universal (Public Domain)** - El código de este repositorio es de dominio público.
+## ⚠️ CRÉDITOS - PROPIEDAD INTELECTUAL
 
-✅ Puedes usar, modificar y distribuir el código libremente.
+<div align="center">
 
-### ⚠️ Propiedad Intelectual
+### 🎨 **CHOBITS (ちょびっツ)** es propiedad de **CLAMP (クランプ)**
 
-**Chobits y todos sus elementos son © CLAMP.**
+**Creadoras:**
+- **Nanase Ohkawa** (大川 七瀬) - Historia y guión
+- **Mokona** (もこな) - Diseño de personajes
+- **Tsubaki Nekoi** (猫井 椿) - Arte
+- **Satsuki Igarashi** (いがらし 寒月) - Fondos
 
-El nombre "Chobits", personajes, conceptos y diseños originales pertenecen a CLAMP y sus licenciatarios.
+**© CLAMP / Kodansha / Madhouse**
+
+📅 **Manga:** 2000-2002 | **Anime:** 2002
+
+---
+
+**TODOS LOS DERECHOS DE CHOBITS PERTENECEN A SUS CREADORES.**
+
+Este proyecto es una **obra derivada sin fines de lucro**.  
+No está afiliado, respaldado ni patrocinado por CLAMP o sus licenciatarios.
+
+</div>
+
+---
 
 **Si usas este código:**
 - Reemplaza los assets con creaciones 100% originales
