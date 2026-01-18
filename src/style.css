@@ -1,0 +1,331 @@
+@import "tailwindcss";
+
+/* ============================================
+   PALETA CIUDAD VACÍA - Alto Contraste
+   ============================================ */
+@layer base {
+  :root {
+    --color-void-black: 0 0% 5%;
+    --color-void-white: 0 0% 98%;
+    --color-chi-pink: 340 60% 80%;
+    --color-shadow: 0 0% 15%;
+  }
+  
+  body {
+    background: hsl(0 0% 5%);
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, system-ui, sans-serif;
+    color: hsl(var(--color-void-white));
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  /* Estrellas fijas y visibles */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(circle at 15% 20%, white 1px, transparent 1px),
+      radial-gradient(circle at 85% 15%, white 2px, transparent 2px),
+      radial-gradient(circle at 45% 30%, white 1px, transparent 1px),
+      radial-gradient(circle at 65% 60%, white 1px, transparent 1px),
+      radial-gradient(circle at 25% 70%, white 2px, transparent 2px),
+      radial-gradient(circle at 75% 40%, white 1px, transparent 1px),
+      radial-gradient(circle at 90% 80%, white 1px, transparent 1px),
+      radial-gradient(circle at 10% 50%, white 1px, transparent 1px),
+      radial-gradient(circle at 55% 85%, white 2px, transparent 2px),
+      radial-gradient(circle at 30% 10%, white 1px, transparent 1px);
+    background-size: 100% 100%;
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  /* Contenedor para que esté sobre las estrellas */
+  body > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* ============================================
+   COMPONENTES
+   ============================================ */
+@layer components {
+  
+/* BOTONES MODERNOS con ease */
+  .btn {
+    padding: 0.875rem 1.75rem;
+    border-radius: 0.625rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    position: relative;
+    border: none;
+    overflow: hidden;
+  }
+  
+  /* Efecto de onda al hover */
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+    pointer-events: none;
+  }
+  
+  .btn:hover::before {
+    width: 400px;
+    height: 400px;
+  }
+  
+  .btn-primary {
+    background: hsl(var(--color-chi-pink));
+    color: hsl(0 0% 10%);
+    box-shadow: 
+      0 4px 12px hsl(340 60% 60% / 0.4),
+      0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+      0 0 25px hsl(340 60% 80% / 0.6),
+      0 8px 20px hsl(340 60% 60% / 0.5),
+      0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  .btn-primary:active {
+    transform: translateY(0);
+    transition: all 0.1s ease;
+    box-shadow: 
+      0 0 15px hsl(340 60% 80% / 0.4),
+      0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .btn-outline {
+    background: rgba(10, 10, 10, 0.6);
+    border: 2px solid hsl(var(--color-void-white));
+    color: hsl(var(--color-void-white));
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  .btn-outline:hover {
+    background: hsl(var(--color-void-white));
+    color: hsl(var(--color-void-black));
+    transform: translateY(-2px);
+    box-shadow: 
+      0 0 20px rgba(255, 255, 255, 0.4),
+      0 8px 20px rgba(255, 255, 255, 0.2);
+  }
+  
+  .btn-outline:active {
+    transform: translateY(0);
+    transition: all 0.1s ease;
+  }
+  
+  .btn-lg {
+    padding: 1.125rem 2.25rem;
+    font-size: 1.05rem;
+  }
+  
+  .btn-sm {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+  }
+  
+  .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+  }
+  
+  /* TARJETAS con sombras marcadas */
+  .card {
+    background: hsl(0 0% 8%);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    border: 2px solid hsl(0 0% 15%);
+    box-shadow: 
+      0 20px 0 hsl(var(--color-shadow)),
+      0 25px 60px rgba(0, 0, 0, 0.9);
+    position: relative;
+  }
+  
+  /* Línea superior rosa */
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15%;
+    right: 15%;
+    height: 3px;
+    background: hsl(var(--color-chi-pink));
+    box-shadow: 0 0 15px hsl(var(--color-chi-pink));
+  }
+  
+  /* Círculos concéntricos debajo (como bajo Chi) */
+  .card::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 80px;
+    background: 
+      radial-gradient(ellipse, transparent 30%, hsl(0 0% 12%) 31%, transparent 32%),
+      radial-gradient(ellipse, transparent 45%, hsl(0 0% 10%) 46%, transparent 47%),
+      radial-gradient(ellipse, transparent 60%, hsl(0 0% 8%) 61%, transparent 62%);
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  
+  /* DRAG & DROP limpio */
+  .drag-item {
+    cursor: move;
+    transition: all 0.3s ease;
+    background: hsl(0 0% 12%);
+    border-radius: 0.75rem;
+    padding: 1rem 1.5rem;
+    border: 2px solid hsl(0 0% 20%);
+    color: hsl(var(--color-void-white));
+    box-shadow: 0 8px 0 hsl(0 0% 8%), 0 10px 25px rgba(0, 0, 0, 0.7);
+    font-weight: 600;
+  }
+  
+  .drag-item:hover {
+    transform: translateY(-6px);
+    border-color: hsl(var(--color-chi-pink));
+    box-shadow: 
+      0 14px 0 hsl(0 0% 8%),
+      0 16px 35px rgba(0, 0, 0, 0.8),
+      0 0 20px hsl(var(--color-chi-pink) / 0.5);
+  }
+  
+  .drag-item:active {
+    cursor: grabbing;
+  }
+  
+  .drag-item.dragging {
+    opacity: 0.5;
+    transform: rotate(8deg) scale(0.95);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9);
+  }
+  
+  /* DROP ZONE con borde definido */
+  .drop-zone {
+    border: 3px dashed hsl(0 0% 25%);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    min-height: 140px;
+    background: hsl(0 0% 8%);
+    color: hsl(0 0% 50%);
+    transition: all 0.3s ease;
+    box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+  }
+  
+  .drop-zone.drag-over {
+    border-color: hsl(210 80% 60%);
+    border-style: solid;
+    background: hsl(210 80% 10%);
+    color: hsl(210 80% 70%);
+    box-shadow: 
+      inset 0 4px 20px rgba(107, 163, 217, 0.2),
+      0 0 30px hsl(210 80% 60% / 0.4);
+  }
+  
+  .drop-zone.filled {
+    border-color: hsl(140 60% 50%);
+    border-style: solid;
+    background: hsl(140 60% 8%);
+    color: hsl(140 60% 70%);
+    box-shadow: 
+      inset 0 4px 20px rgba(0, 255, 100, 0.1),
+      0 0 20px hsl(140 60% 50% / 0.3);
+  }
+  
+  .drop-zone.error {
+    border-color: hsl(0 70% 55%);
+    border-style: solid;
+    background: hsl(0 70% 8%);
+    color: hsl(0 70% 70%);
+    animation: shake 0.5s ease;
+    box-shadow: 
+      inset 0 4px 20px rgba(255, 80, 80, 0.1),
+      0 0 25px hsl(0 70% 55% / 0.4);
+  }
+}
+
+/* ============================================
+   ANIMACIONES
+   ============================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-12px); }
+  75% { transform: translateX(12px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease-out;
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* ============================================
+   UTILIDADES
+   ============================================ */
+@layer utilities {
+  .text-gradient-pink {
+    background: linear-gradient(135deg, 
+      hsl(340 80% 75%), 
+      hsl(340 60% 85%)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Texto con sombra marcada para legibilidad */
+  .text-shadow {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  }
+}
