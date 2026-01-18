@@ -55,6 +55,10 @@ Una reflexión sobre la soledad, la tecnología y la conexión humana, inspirada
 
 <img src="./public/backgrounds/b1.png" width="220" alt="Ciudad vacía"/>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3d2e270646f0ab972a8ee574fe3a891410810905
 ### Watash Sprites
 
 <img src="./public/watash/w2.png" width="110" alt="Alegre"/>
@@ -89,11 +93,18 @@ Una reflexión sobre la soledad, la tecnología y la conexión humana, inspirada
 ---
 
 ## 🚀 Instalación
+<<<<<<< HEAD
 
 ```bash
 # Clonar repositorio
 git clone https://github.com/tu-usuario/chobits-adventure.git
 cd chobits-adventure
+=======
+```bash
+# Clonar repositorio
+git clone https://github.com/tu-usuario/ciudad-vacia.git
+cd ciudad-vacia
+>>>>>>> 3d2e270646f0ab972a8ee574fe3a891410810905
 
 # Instalar dependencias
 pnpm install
@@ -170,6 +181,10 @@ Todos los derechos de Chobits pertenecen a CLAMP.
 
 ---
 
+<<<<<<< HEAD
 [![Star this repo](https://img.shields.io/github/stars/tu-usuario/chobits-adventure?style=social)](https://github.com/tu-usuario/chobits-adventure)
+=======
+[![Star this repo](https://img.shields.io/github/stars/tu-usuario/ciudad-vacia?style=social)](https://github.com/tu-usuario/ciudad-vacia)
+>>>>>>> 3d2e270646f0ab972a8ee574fe3a891410810905
 
 </div>
