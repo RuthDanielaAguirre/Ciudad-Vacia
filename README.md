@@ -167,11 +167,4 @@ Todos los derechos de Chobits pertenecen a CLAMP.
 *"¿Hay alguien... solo para mí?"*
 
 ---
-
-<<<<<<< HEAD
-[![Star this repo](https://img.shields.io/github/stars/tu-usuario/chobits-adventure?style=social)](https://github.com/tu-usuario/chobits-adventure)
-=======
-[![Star this repo](https://img.shields.io/github/stars/tu-usuario/ciudad-vacia?style=social)](https://github.com/tu-usuario/ciudad-vacia)
->>>>>>> 3d2e270646f0ab972a8ee574fe3a891410810905
-
 </div>
